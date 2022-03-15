@@ -13,32 +13,6 @@ export default function Header() {
 	const switchLanguagesShow = () => setShowlanguages(prev => !prev);
 	const switchNavbarShow = () => setShowNavbar(prev => !prev);
 
-	const languageSwitchUI = (
-		<>
-			<Image
-				onClick={switchLanguagesShow}
-				src={globalImg.url}
-				alt={globalImg.alt}
-				title={globalImg.alt}
-				width={30}
-				height={30}
-			/>
-			<div className={`absolute w-24 -left-[30px] flex flex-col border bg-customBlue text-white rounded-lg customTransition ${showLanguages ? "top-[120%]" : "top-[140%] pointer-events-none opacity-0"}`}>
-				{languages.map((language,index) => (
-					<span
-						key={index}
-						onClick={switchLanguagesShow}
-						className="mx-auto w-[80%] border-b text-center border-grey-700 px-3 py-1 last:border-0"
-					>{language}</span>
-				))}
-				<span
-					onClick={switchLanguagesShow}
-					className="absolute text-black -top-3 -right-3 bg-white py-1 cursor-pointer px-2 text-xs rounded-full "
-				>&#10005;</span>
-			</div>
-		</>
-	);
-
 	const navItemsUI = (name,slug,responsiveNavItem) => (
 		<li key={slug} onClick={responsiveNavItem ? switchNavbarShow : null} className="text-lg hover:text-gray-500 transition duration-200">
 			<Link href={slug}>
@@ -56,9 +30,6 @@ export default function Header() {
 				</Link>
 				<ul className="hidden md:flex space-x-8 items-center">
 					{navItems.map(({name, slug}) => navItemsUI(name,slug,false))}
-					<div className="flex items-center cursor-pointer relative">
-						{languageSwitchUI}
-					</div>
 				</ul>
 				<div onClick={switchNavbarShow} className="md:hidden flex flex-col space-y-1 w-7 cursor-pointer z-50">
 					{[...new Array(3)].map((_,index) => (
@@ -67,10 +38,10 @@ export default function Header() {
 				</div>
 			</div>
 			<ul className={`md:hidden absolute top-0 customTransition h-full bg-white w-48 flex flex-col justify-center items-center space-y-6 ${showNavbar ? "left-0" : "-left-48"}`}>
+				<Link href="/">
+					<a className="text-3xl absolute top-3 left-0 right-0 text-center border-b pb-4">{logoAlt}</a>
+				</Link>
 				{navItems.map(({name, slug}) => navItemsUI(name,slug,true))}
-				<div className="flex items-center cursor-pointer absolute -top-1 right-5">
-					{languageSwitchUI}
-				</div>
 			</ul>
 		</div>
 	);
