@@ -8,3 +8,7 @@
   -o-transition: all .3s;
   transition: all .3s;
 }
+
+.borderForNow {
+	border: 1px solid #000 !important;
+}

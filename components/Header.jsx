@@ -23,7 +23,7 @@ export default function Header() {
 
 	return (
 		<div className="container mx-auto p-8 border-b">
-			{showNavbar && <div onClick={switchNavbarShow} className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>}
+			{showNavbar && <div onClick={switchNavbarShow} className="absolute z-30 top-0 left-0 w-full h-full bg-black opacity-70"></div>}
 			<div className="flex justify-between items-center relative">
 				<Link href="/">
 					<a className="text-3xl">{logoAlt}</a>

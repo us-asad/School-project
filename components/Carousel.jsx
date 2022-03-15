@@ -18,6 +18,7 @@ export default function Carousel() {
 	return (
 		<div className="h-[250px] sm:h-[360px] md:h-[440px] lg:h-[550px] xl:h-[600px] relative group">
 			<CarouselSlider
+				autoPlay
 				infinite
 				autoPlaySpeed={5000}
 				customRightArrow={arrowIcon(true)}
