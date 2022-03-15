@@ -37,7 +37,7 @@ export default function Header() {
 					))}
 				</div>
 			</div>
-			<ul className={`md:hidden absolute top-0 customTransition h-full bg-white w-48 flex flex-col justify-center items-center space-y-6 ${showNavbar ? "left-0" : "-left-48"}`}>
+			<ul className={`md:hidden absolute top-0 z-50 customTransition h-full bg-white w-48 flex flex-col justify-center items-center space-y-6 ${showNavbar ? "left-0" : "-left-48"}`}>
 				<Link href="/">
 					<a className="text-3xl absolute top-3 left-0 right-0 text-center border-b pb-4">{logoAlt}</a>
 				</Link>

@@ -16,7 +16,7 @@ export default function Carousel() {
 	const arrowIcon = isRightArrow => (<span className={`absolute group-hover:opacity-100 opacity-0 transition duration-200 top-[40%] px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 	return (
-		<div className="h-[210px] sm:h-[360px] md:h-[440px] lg:h-[550px] xl:h-[600px] relative group">
+		<div className="h-[250px] sm:h-[360px] md:h-[440px] lg:h-[550px] xl:h-[600px] relative group">
 			<CarouselSlider
 				infinite
 				autoPlaySpeed={5000}
