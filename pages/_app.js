@@ -8,7 +8,9 @@ function MyApp({ Component, pageProps }) {
 	    	<title>My School</title>
 	      <meta name="description" content="My School 8" />
 	    </Head>
-  		<Component {...pageProps} />
+	    <div className="selection:bg-fuchsia-300 text-white">
+  			<Component {...pageProps} />
+  		</div>
   	</>
   );
 }

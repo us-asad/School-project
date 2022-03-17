@@ -1,30 +1,102 @@
 const data = {
-	logoAlt: "Logo",
 	navItems: [
-		{name: "Home", slug: "/"},
-		{name: "About", slug: "#about"},
-		{name: "Contact", slug: "#contact"},
-		{name: "Blog", slug: "/blog"}
+		{
+			name: "Home", 
+			slug: "/"
+		},
+		{
+			name: "About",
+			slug: "#about"
+		},
+		{
+			name: "Contact",
+			slug: "#contact"
+		},
+		{
+			name: "Blog",
+			slug: "/blog"
+		}
 	],
 	images: {
-		globalImg: {url: "/global.png", alt: "change language"},
+		logo: {
+			url: "",
+			alt: "Logo"
+		},
+		globalImg: {
+			url: "/global.png",
+			alt: "change language"
+		},
 	},
 	homeCarouselImages: [
-		{imageUrl: "/carousel/banner1.jpg", alt: "banner 1", title: "Lorem Ipsum 1", description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 1", buttonName: "Know more about 1", buttonUrl: "/post/know-more-about-1"},
-		{imageUrl: "/carousel/banner2.jpg", alt: "banner 2", title: "Lorem Ipsum 2", description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 2", buttonName: "Know more about 2", buttonUrl: "/post/know-more-about-2"},
-		{imageUrl: "/carousel/banner3.jpg", alt: "banner 3", title: "Lorem Ipsum 3", description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 3", buttonName: "Know more about 3", buttonUrl: "/post/know-more-about-3"}
+		{
+			image: {
+				url: "/carousel/1.jpg",
+				alt: "image 1"
+			},
+			title: "Lorem Ipsum 1",
+			description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 1",
+			link: {
+				name: "Know more about 1",
+				url: "/post/know-more-about-1"
+			}
+		},
+		{
+			image: {
+				url: "/carousel/2.jpg",
+				alt: "image 2"
+			},
+			title: "Lorem Ipsum 2",
+			description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 2",
+			link: {
+				name: "Know more about 2",
+				url: "/post/know-more-about-2"
+			}
+		},
+		{
+			image: {
+				url: "/carousel/3.jpg",
+				alt: "image 3"
+			},
+			title: "Lorem Ipsum 3",
+			description: "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 3",
+			link: {
+				name: "Know more about 3",
+				url: "/post/know-more-about-3"
+			}
+		},
 	],
 	about: {
 		statusTitle: "Our Status",
 		sectionTitle: "About Us",
 		status: [
-			{name: "teachers", count: "344", imageUrl: "/status-icons/teacher.png", imageAlt: "teachers img", smallSize: true},
-			{name: "classes", count: "323", imageUrl: "/status-icons/class.png", imageAlt: "classes img"},
-			{name: "pupils", count: "2834", imageUrl: "/status-icons/pupil.png", imageAlt: "pupils img"}
+			{
+				name: "teachers", 
+				count: "344", 
+				image: {
+					url: "/status-icons/teacher.png",
+					alt: "teachers icon"
+				}
+			},
+			{
+				name: "classes", 
+				count: "323",
+				image: {
+					url: "/status-icons/class.png",
+					alt: "classes icon"
+				}
+			},
+			{
+				name: "pupils", 
+				count: "2834", 
+				image: {
+					url: "/status-icons/pupil.png",
+					alt: "pupils icon"
+				}
+			}
 		],
 		aboutContent: {
 			mainImage: {
-				url: "/carousel/banner1.jpg",
+				url: "/carousel/1.jpg",
 				alt: "School Pic"
 			},
 			title: "8 School",
@@ -150,6 +222,12 @@ const data = {
 				}
 			]
 		}
+	},
+	footer: {
+		bottomText: `© ${new Date().getFullYear()} School 8 | All Right Reversed`
+	},
+	recentPosts: {
+		title: "Recent Posts"
 	}
 }
 

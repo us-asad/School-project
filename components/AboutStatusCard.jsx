@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState,  useEffect } from "react";
 
-export default function AboutStatusCard({ count: number, name, imageUrl, imageAlt }) {
+export default function AboutStatusCard({ count: number, name, image }) {
 	const [count, setCount] = useState("0");
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function AboutStatusCard({ count: number, name, imageUrl, imageAl
     if (start === end) return;
 
     let totalMilSecDur = parseInt(duration);
-    let incrementTime = (totalMilSecDur / end) * 1000;
+    let incrementTime = (totalMilSecDur / end) * 10;
 
     let timer = setInterval(() => {
       start += 1;
@@ -23,9 +23,9 @@ export default function AboutStatusCard({ count: number, name, imageUrl, imageAl
   }, [number]);
 
 	return (
-		<div className="rounded-full w-36 h-36 border border-green-500 border-4 flex justify-center items-center flex-col">
+		<div className="rounded-full hover:scale-105 hover:shadow-xl transition duration-500 w-36 h-36 border border-green-500 border-4 flex justify-center items-center flex-col">
 			<b className="text-2xl mb-[8px]">{count}</b>
-			<Image src={imageUrl} alt={imageAlt} width={30} height={30} />
+			<Image src={image.url} alt={image.alt} width={30} height={30} />
 			<p className="text-xl -mt-[4px] font-semibold">{name}</p>
 		</div>
 	);
