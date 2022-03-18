@@ -36,3 +36,13 @@ body:before {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+
+@media (min-width: 769px) {
+  .customCarouselSpaceXStyle > .react-multi-carousel-track {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+

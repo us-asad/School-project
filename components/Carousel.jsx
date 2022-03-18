@@ -1,7 +1,6 @@
 import data from "data";
-import CarouselSlider from "react-multi-carousel";
+import Carousel from "react-multi-carousel";
 import CarouselCard from "./CarouselCard.jsx";
-import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   superLargeDesktop: {
@@ -10,14 +9,14 @@ const responsive = {
   }
 };
 
-export default function Carousel() {
+export default function CarouselSection() {
 	const { homeCarouselImages } = data;
 
-	const arrowIcon = isRightArrow => (<span className={`absolute group-hover:opacity-100 opacity-0 transition duration-200 top-[40%] px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
+	const arrowIcon = isRightArrow => (<span className={`absolute group-hover:opacity-100 opacity-0 transition duration-200 flex items-center px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 	return (
 		<div className="h-[250px] sm:h-[360px] md:h-[440px] lg:h-[550px] xl:h-[600px] relative group">
-			<CarouselSlider
+			<Carousel
 				autoPlay
 				infinite
 				autoPlaySpeed={5000}
@@ -28,7 +27,7 @@ export default function Carousel() {
 				{homeCarouselImages.map((imageData,index) => (
 					<CarouselCard key={index} {...imageData} />
 				))}
-			</CarouselSlider>
+			</Carousel>
 		</div>
 	);
 }

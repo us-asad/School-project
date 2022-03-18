@@ -1,8 +1,26 @@
 import data from "data";
+import Carousel from "react-multi-carousel";
 import { AboutStatusCard, AboutContent, StaffCard } from ".";
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 768 },
+    items: 6
+  },
+  tablet: {
+    breakpoint: { max: 768, min: 640 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 640, min: 0 },
+    items: 1
+  }
+};
 
 export default function About() {
 	const { sectionTitle, status, aboutContent, staff, topTeachers} = data.about;
+
+	const arrowIcon = isRightArrow => (<span className={`absolute md:hidden transition duration-200 flex items-center px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 	return (
 		<div className="container mx-auto my-8">
@@ -13,15 +31,29 @@ export default function About() {
 				{status.map((statusData,index) => <AboutStatusCard key={index} {...statusData} />)}
 			</div>
 			<AboutContent {...aboutContent} />
-			<div className="mt-8 flex-col sm:flex-row items-center sm:space-y-0 space-y-4 flex sm:justify-evenly">
-				{staff.main.map((staffData,index) => <StaffCard key={index} {...staffData} />)}
+			<div className="mt-8">
+				<Carousel
+						infinite
+						customRightArrow={arrowIcon(true)}
+						customLeftArrow={arrowIcon(false)}
+						responsive={responsive}
+						className="customCarouselSpaceXStyle"
+					>
+						{staff.main.map((staffData,index) => <StaffCard key={index} {...staffData} />)}
+				</Carousel>
 			</div>
 			{staff.topStaff.map(({title, staffData},index) => (
 				<div key={index} className="mt-8">
-					<h3 className="text-center text-3xl font-semibold">{title}</h3>
-					<div className="mt-4 flex-col sm:flex-row items-center sm:space-y-0 space-y-4 flex sm:justify-evenly">
+					<h3 className="text-center text-3xl font-semibold mb-5">{title}</h3>
+					<Carousel
+						infinite
+						customRightArrow={arrowIcon(true)}
+						customLeftArrow={arrowIcon(false)}
+						responsive={responsive}
+						className="customCarouselSpaceXStyle"
+					>
 						{staffData.map((item,index) => <StaffCard key={index} {...item} />)}
-					</div>
+					</Carousel>
 				</div>
 			))}
 		</div>
