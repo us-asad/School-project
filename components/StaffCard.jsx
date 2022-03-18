@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function StaffCard({name, position, image}) {
 	return (
-		<div className="flex flex-col items-center customSpanOverflow">
+		<div className="flex flex-col items-center pt-1 customSpanOverflow">
 			<Image
 				src={image.url}
 				alt={image.alt}

@@ -9,7 +9,7 @@ export default function Header() {
 
 	const { navItems, images: { globalImg, logo } } = data;
 
-	const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 ${showNavbar ? "bg-white" : "bg-customBlue"} ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
+	const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 bg-white ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
 	const switchLanguagesShow = () => setShowlanguages(prev => !prev);
 	const switchNavbarShow = () => setShowNavbar(prev => !prev);
 
@@ -43,7 +43,7 @@ export default function Header() {
 					))}
 				</div>
 			</div>
-			<ul className={`md:hidden absolute top-0 z-50 customTransition h-full bg-white w-48 flex flex-col justify-center items-center space-y-6 ${showNavbar ? "left-0" : "-left-48"}`}>
+			<ul className={`md:hidden absolute top-0 z-50 text-black customTransition h-full bg-white w-48 flex flex-col justify-center items-center space-y-6 ${showNavbar ? "left-0" : "-left-48"}`}>
 				<Link href="/">
 					<a className="text-3xl absolute top-3 left-0 right-0 text-center border-b pb-4">{logo.alt}</a>
 				</Link>

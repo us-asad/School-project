@@ -20,29 +20,69 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
-body:before {
-    content: "";
-    width: 100%;
-    height: 100vh;
-    background-image: url("/bg.jpg");
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+body::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-image: url("/bg.jpg");
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.customAboutImageStyle > span {
+  width: 100% !important;
+}
+
+.customCarouselForRecentPosts .react-multi-carousel-item {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.custonLineClamp1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.custonLineClamp4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; 
+}
+
+@media (min-width: 1200px) {
+  .customCarouselForRecentPosts .react-multi-carousel-item {
+    flex: inherit !important;
+    width: auto !important;
   }
+
+  .customCarouselForRecentPosts .react-multi-carousel-list {
+    justify-content: center;
+  }
+
+  .customCarouselForRecentPosts .react-multi-carousel-track {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+}
 
 
 @media (min-width: 769px) {
-  .customCarouselSpaceXStyle > .react-multi-carousel-track {
+  .customCarouselSpaceXStyle .react-multi-carousel-track {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
   }
 }
-

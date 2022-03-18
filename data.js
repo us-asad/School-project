@@ -232,6 +232,7 @@ const data = {
 			{
 				title: "Recent Post Title 1",
 				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				date: "2022-03-17T10:29:31.676291+00:00",
 				link: {
 					name: "Read More",
 					url: "/post1"
@@ -244,29 +245,35 @@ const data = {
 			{
 				title: "Recent Post Title 1",
 				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				date: "2022-03-17T10:29:31.676291+00:00",
 				link: {
 					name: "Read More",
 					url: "/post1"
 				},
 				image: {
 					alt: "post img",
-					url: "/carousel/1.jpg"
+					url: "/carousel/2.jpg"
 				}
 			},
 			{
 				title: "Recent Post Title 1",
 				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				date: "2022-03-17T10:29:31.676291+00:00",
 				link: {
 					name: "Read More",
 					url: "/post1"
 				},
 				image: {
 					alt: "post img",
-					url: "/carousel/1.jpg"
+					url: "/carousel/3.jpg"
 				}
 			},
 			
 		]
+	},
+	calendarImage: {
+		url: "/calendar.svg",
+		alt: "calendar ico"
 	}
 }
 
