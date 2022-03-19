@@ -323,9 +323,12 @@ const data = {
           alt: "post img",
           url: "/carousel/3.jpg"
         }
-      },
-      
-    ]
+      }  
+    ],
+    seeMoreLink: {
+      name: "see more",
+      url: "/blog"
+    }
   },
   calendarImage: {
     url: "/calendar.svg",

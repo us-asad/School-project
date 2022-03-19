@@ -38,13 +38,13 @@ export default function Contact() {
 	}
 
 	return (
-		<div className="container mx-auto mb-10">
+		<section className="container mx-auto mb-10" id="contact">
 			<div className="text-3xl flex justify-center font-bold text-center mb-7">
 				<h2 className="pb-3 px-3 border-b before:absolute before:-bottom-[4.5px] relative before:left-1/2 before:w-2 before:h-2 before:rounded-full before:bg-gray-400">{title}</h2>
 			</div>
-			<div className="flex flex-col lg:flex-row space-y-4 space-x-12">
-				<div className="bg-white text-black pt-7 px-5 pb-5 rounded-lg w-full lg:w-1/2">
-					<h3 className="text-xl mb-5">{contactForm.title}</h3>
+			<div className="flex flex-col lg:flex-row space-y-4 lg:space-x-12">
+				<div className="bg-white pt-7 px-5 pb-5 rounded-lg lg:w-1/2 mx-5 lg:mx-0">
+					<h3 className="text-xl mb-5 text-black">{contactForm.title}</h3>
 					<form className="space-y-7" ref={form} onSubmit={sendMessage}>
 						{contactForm.inputFields.map(({name, type, placeholder}, index) => (
 							<input
@@ -65,7 +65,7 @@ export default function Contact() {
 						>{contactForm.buttonName}</button>
 					</form>
 				</div>
-				<div>
+				<div className="mx-5 lg:mx-0">
 					<div>
 						<h3 className="text-2xl mb-3">Contact</h3>
 						{contactDetails.map(({contactName, image, link},index) => (
@@ -105,6 +105,6 @@ export default function Contact() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

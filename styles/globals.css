@@ -2,19 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.customTransition {
-	-webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
-}
 
-.borderForNow {
-	border: 1px solid #000 !important;
-}
-
-.customSpanOverflow > span {
-	overflow: inherit !important;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +25,17 @@ body::before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.customTransition {
+	-webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.customSpanOverflow > span {
+	overflow: inherit !important;
 }
 
 .customAboutImageStyle > span {

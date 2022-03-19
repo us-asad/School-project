@@ -23,12 +23,20 @@ export default function About() {
 	const arrowIcon = isRightArrow => (<span className={`absolute md:hidden transition duration-200 flex items-center px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 	return (
-		<div className="container mx-auto my-8">
+		<section className="container mx-auto my-8" id="about">
 			<div className="text-3xl flex justify-center font-bold text-center mb-7">
 				<h2 className="pb-3 px-3 border-b before:absolute before:-bottom-[4.5px] relative before:left-1/2 before:w-2 before:h-2 before:rounded-full before:bg-gray-400">{sectionTitle}</h2>
 			</div>
-			<div className="flex-col sm:flex-row items-center sm:space-y-0 space-y-4 flex sm:justify-evenly">
-				{status.map((statusData,index) => <AboutStatusCard key={index} {...statusData} />)}
+			<div className="">
+				<Carousel
+						infinite
+						customRightArrow={arrowIcon(true)}
+						customLeftArrow={arrowIcon(false)}
+						responsive={responsive}
+						className="customCarouselSpaceXStyle"
+					>
+					{status.map((statusData,index) => <AboutStatusCard key={index} {...statusData} />)}
+				</Carousel>
 			</div>
 			<AboutContent {...aboutContent} />
 			<div className="mt-8">
@@ -56,6 +64,6 @@ export default function About() {
 					</Carousel>
 				</div>
 			))}
-		</div>
+		</section>
 	);
 }

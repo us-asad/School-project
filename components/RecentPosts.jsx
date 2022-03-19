@@ -1,4 +1,5 @@
 import data from "data";
+import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import RecentPostCard from "./RecentPostCard.jsx";
 
@@ -18,7 +19,7 @@ const responsive = {
 };
 
 export default function RecentPosts() {
-	const { recentPosts: { title, posts }, calendarImage } = data;
+	const { recentPosts: { title, posts, seeMoreLink }, calendarImage } = data;
 
 	const arrowIcon = isRightArrow => (<span className={`absolute transition duration-200 flex items-center px-5 cursor-pointer h-full text-gray-200 z-20 text-4xl ${isRightArrow ? "right-1 sm:right-10" : "left-1 sm:left-10"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
@@ -37,6 +38,9 @@ export default function RecentPosts() {
 					{posts.map((post,index) => <RecentPostCard key={index} calendarImage={calendarImage} {...post} />)}
 				</Carousel>
 			</div>
+			<Link href={seeMoreLink.url}>
+				<a className="text-lg mt-6 inline-block text-center w-full font-medium tracking-wider uppercase hover:text-blue-200 transition duration-900 relative">{seeMoreLink.name}</a>
+			</Link>
 		</div>
 	);
 }
