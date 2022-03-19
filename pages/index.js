@@ -1,10 +1,10 @@
-import { Header, Carousel, About, Footer, RecentPosts } from "components";
+import { Header, HomeMain, About, Footer, RecentPosts } from "components";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Carousel />
+      <HomeMain />
       <About />
       <RecentPosts />
       <Footer />
