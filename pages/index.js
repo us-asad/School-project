@@ -1,4 +1,4 @@
-import { Header, HomeMain, About, Footer, RecentPosts } from "components";
+import { Header, HomeMain, About, Footer, RecentPosts, Contact } from "components";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <HomeMain />
       <About />
       <RecentPosts />
+      <Contact />
       <Footer />
     </>
   );

@@ -197,8 +197,90 @@ const data = {
       ]
     }
   },
+  contact: {
+    title: "Contact Us",
+    socialMedia: {
+      title: "Social Media",
+      icons: [
+        { 
+          url: "#",
+          image: {
+            url: "/icons/facebook.png",
+            alt: "Facebook"
+          }
+        },
+        { 
+          url: "#",
+          image: {
+            url: "/icons/instagram.png",
+            alt: "Instagram"
+          }
+        },
+        { 
+          url: "#",
+          image: {
+            url: "/icons/telegram.png",
+            alt: "Telegram"
+          }
+        },
+        { 
+          url: "#",
+          image: {
+            url: "/icons/youtube.png",
+            alt: "YouTube"
+          }
+        }
+      ]
+    },
+    contactForm: {
+      title: "Send a Message",
+      buttonName: "send message",
+      alerts: {
+        success: "Your message was successfully sent!",
+        fail: "Your message failed, please try again",
+        validationFail: "Please fill all fields with corrent value!"
+      },
+      inputFields: [
+        {
+          name: "user_name",
+          type: "text",
+          placeholder: "Name"
+        },
+        {
+          name: "user_email",
+          type: "email",
+          placeholder: "Email"
+        }
+      ],
+      textareaPlaceholder: "Message..."
+    },
+    contactDetails: [
+      {
+        contactName: "Location",
+        image: {
+          url: "/icons/location.png",
+          alt: "loc icon"
+        },
+        link: {
+          url: "https://www.google.com/maps/place/8-maktab/@37.2369906,67.2569895,17z/data=!4m7!3m6!1s0x0:0xc42e513a15d8332c!8m2!3d37.2369906!4d67.2591782!9m1!1b1",
+          name: "See on goole map"
+        }
+      },
+      {
+        contactName: "Email",
+        image: {
+          url: "/icons/mail.png",
+          alt: "mail icon"
+        },
+        link: {
+          url: "mailto:kundalikcom01@gmail.com",
+          name: "kundalikcom01@gmail.com"
+        }
+      }
+    ]
+  },
   footer: {
-    bottomText: `© ${new Date().getFullYear()} School 8 | All Right Reversed`
+    bottomText: `© ${new Date().getFullYear()} School 8 | All Right Reserved`
   },
   recentPosts: {
     title: "Recent Posts",
