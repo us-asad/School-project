@@ -11,7 +11,7 @@ export default function Header() {
 
 	const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 bg-white ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
 	const switchNavbarShow = () => setShowNavbar(prev => !prev);
-	const navbarClassNames = `flex justify-between items-center transition duration-100 w-full py-8 px-6 sm:px-20 fixed top-0 left-0 z-30 ${scrollY > 30 ? "bg-[#0155bf] border-b-1" : ""}`;
+	const navbarClassNames = `flex justify-between items-center transition duration-100 w-full py-8 px-6 sm:px-20 fixed top-0 left-0 z-30 ${scrollY > 30 ? "bg-[#0155bf] border-b" : ""}`;
 
 	if (showNavbar && typeof window !== "undefined") {
 		window.document.body.style = "overflow: hidden";
