@@ -262,7 +262,7 @@ const data = {
           alt: "loc icon"
         },
         link: {
-          url: "https://www.google.com/maps/place/8-maktab/@37.2369906,67.2569895,17z/data=!4m7!3m6!1s0x0:0xc42e513a15d8332c!8m2!3d37.2369906!4d67.2591782!9m1!1b1",
+          url: "https://www.google.com/maps/place/8-maktab/@37.2369906,67.2569895,17z/data=!4m14!1m8!3m7!1s0x0:0xc42e513a15d8332c!2s8-maktab!8m2!3d37.2369906!4d67.2591782!9m1!1b1!3m4!1s0x3f353175ea9305a7:0xc42e513a15d8332c!8m2!3d37.2369906!4d67.2591782",
           name: "See on goole map"
         }
       },
