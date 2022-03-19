@@ -81,6 +81,7 @@ export default function Contact() {
 								<a
 									href={link.url}
 									target="_blank"
+									rel="noreferrer"
 									className="hover:text-blue-500 underline transition duration-500"
 								>{link.name}</a>
 							</div>
