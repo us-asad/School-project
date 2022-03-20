@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header } from "components";
+import { Header, Footer } from "components";
 import "react-multi-carousel/lib/styles.css";
 import 'styles/globals.css';
 
@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
 	    <div className="selection:bg-fuchsia-300 text-white">
       	<Header />
   			<Component {...pageProps} />
+  			<Footer />
   		</div>
   	</div>
   );

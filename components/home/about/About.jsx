@@ -1,6 +1,6 @@
 import data from "data";
 import Carousel from "react-multi-carousel";
-import { AboutStatusCard, AboutContent, StaffCard } from ".";
+import { AboutStatusCard, AboutContent, StaffCard } from "components";
 
 const responsive = {
   superLargeDesktop: {
@@ -18,7 +18,7 @@ const responsive = {
 };
 
 export default function About() {
-	const { sectionTitle, status, aboutContent, staff, topTeachers} = data.about;
+	const { sectionTitle, status, aboutContent, staff, topTeachers} = data.home.about;
 
 	const arrowIcon = isRightArrow => (<span className={`absolute md:hidden transition duration-200 flex items-center px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 

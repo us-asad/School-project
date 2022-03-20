@@ -7,7 +7,7 @@ export default function Header() {
 	const [showNavbar, setShowNavbar] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 
-	const { navItems, images: { globalImg, logo } } = data;
+	const { layout: { navItems }, images: { logoImage } } = data;
 
 	const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 bg-white ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
 	const switchNavbarShow = () => setShowNavbar(prev => !prev);
@@ -38,7 +38,7 @@ export default function Header() {
 			{showNavbar && <div onClick={switchNavbarShow} className="absolute z-30 top-0 left-0 w-screen h-[1000vh] bg-black opacity-70"></div>}
 			<div className={navbarClassNames}>
 				<Link href="/">
-					<a className="text-3xl">{logo.alt}</a>
+					<a className="text-3xl">{logoImage.alt}</a>
 				</Link>
 				<ul className="hidden md:flex space-x-8 items-center">
 					{navItems.map(({name, slug}) => navItemsUI(name,slug,false))}
@@ -51,7 +51,7 @@ export default function Header() {
 			</div>
 			<ul className={`md:hidden fixed top-0 z-50 text-black customTransition h-full bg-white w-48 flex flex-col justify-center items-center space-y-6 ${showNavbar ? "left-0" : "-left-48"}`}>
 				<Link href="/">
-					<a className="text-3xl absolute top-3 left-0 right-0 text-center border-b pb-4">{logo.alt}</a>
+					<a className="text-3xl absolute top-3 left-0 right-0 text-center border-b pb-4">{logoImage.alt}</a>
 				</Link>
 				{navItems.map(({name, slug}) => navItemsUI(name,slug,true))}
 			</ul>

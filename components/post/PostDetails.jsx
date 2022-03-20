@@ -4,7 +4,7 @@ import moment from "moment";
 import Image from "next/image";
 
 export default function PostCard() {
-	const { fakePost: { title, text, date, image }, calendarImage } = data;
+	const { post: { fakePost: { title, text, date, image } }, images: { calendarImage } } = data;
 
 	const getContentFragment = (index, text, obj, type) => {
 		let modifiedText = text;

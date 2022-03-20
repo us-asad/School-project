@@ -18,7 +18,7 @@ const emailValidate = email => {
 export default function Contact() {
 	const form = useRef();
 
-	const { title, contactForm, socialMedia, contactDetails, alerts } = data.contact;
+	const { title, contactForm, socialMedia, contactDetails, alerts } = data.home.contact;
 
 	const sendMessage = e => {
   	e.preventDefault();

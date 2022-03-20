@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HomeMain() {
-	const { title, subtitle, link, image } = data.home;
+	const { title, subtitle, link, image } = data.home.homeMain;
 
 	return (
 		<div className="container overflow-hidden justify-between mt-10 mx-auto h-auto flex flex-col lg:flex-row md:h-[610px] lg:h-96">

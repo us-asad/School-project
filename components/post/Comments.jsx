@@ -2,7 +2,7 @@ import data from "data";
 import moment from "moment";
 
 export default function Comments() {
-	const comments = data.fakeComments;
+	const comments = data.post.fakeComments;
 
 	if (!comments.length) return <></>;
 

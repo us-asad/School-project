@@ -1,9 +1,9 @@
 import data from "data";
 import Link from "next/link";
-import { PostCard, CommentsForm, Comments } from "components";
+import { PostDetails, CommentsForm, Comments } from "components";
 
 export default function Post() {
-	const { title, text, date, image } = data.fakePost;
+	const { title, text, date, image } = data.post.fakePost;
 
 	return (
 		<div className="container mx-auto">
@@ -14,7 +14,7 @@ export default function Post() {
 				</a>
 			</Link>
 			<div className="mt-8">
-				<PostCard  />
+				<PostDetails />
 				<div className="mt-10 flex flex-col lg:flex-row space-y-8 lg:space-y-0">
 					<div className="w-[90%] mx-auto lg:w-[55%]">
 						<CommentsForm />

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function RecentPostCard(props) {
   const { title, description, image, link, date, isBlogPage } = props;
-  const { calendarImage } = data;
+  const { calendarImage } = data.images;
 
   return (
     <section className={`h-[616px] bg-[#f8faff] text-black mx-5 sm:mx-0 ${isBlogPage ? "rounded-lg" : "rounded w-[350px]"}`} id="recent-posts">
