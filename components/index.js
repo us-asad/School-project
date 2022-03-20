@@ -6,4 +6,5 @@ export { default as AboutContent } from "./AboutContent.jsx";
 export { default as StaffCard } from "./StaffCard.jsx";
 export { default as Footer } from "./Footer.jsx";
 export { default as RecentPosts } from "./RecentPosts.jsx";
+export { default as RecentPostCard } from "./RecentPostCard.jsx";
 export { default as Contact } from "./Contact.jsx";
