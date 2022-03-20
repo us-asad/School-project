@@ -8,3 +8,6 @@ export { default as Footer } from "./Footer.jsx";
 export { default as RecentPosts } from "./RecentPosts.jsx";
 export { default as RecentPostCard } from "./RecentPostCard.jsx";
 export { default as Contact } from "./Contact.jsx";
+export { default as PostCard } from "./PostCard.jsx";
+export { default as CommentsForm } from "./CommentsForm.jsx";
+export { default as Comments } from "./Comments.jsx";
