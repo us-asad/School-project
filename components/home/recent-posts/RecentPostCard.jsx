@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function RecentPostCard(props) {
-  const { title, description, image, link, date, isBlogPage } = props;
+  const { title, subtitle, image, slug, createdAt, isBlogPage } = props;
   const { calendarImage } = data.images;
 
   return (
@@ -12,7 +12,7 @@ export default function RecentPostCard(props) {
       <div className="h-[316px] relative">
         <Image
           src={image.url}
-          alt={image.alt}
+          alt="post img"
           objectFit="cover"
           layout="fill"
           className={`transition duration-500 rounded-b-none ${isBlogPage ? "rounded-lg" : "rounded"}`}
@@ -27,15 +27,15 @@ export default function RecentPostCard(props) {
               width={18}
               height={18}
             />
-            <span className="ml-2">{moment(date).format("DD MMM, YYYY")}</span>
+            <span className="ml-2">{moment(createdAt).format("DD MMM, YYYY")}</span>
           </div>
-          <Link href={link.url}>
+          <Link href={`/post/${slug}`}>
             <a className="mt-5 mb-3.5 text-xl font-bold custonLineClamp1 hover:text-pink-800 transition duration-200">{title}</a>
           </Link>
-          <p className="text-base text-gray-700 font-thin custonLineClamp4">{description}</p>
+          <p className="text-base text-gray-700 font-thin custonLineClamp4">{subtitle}</p>
         </div>
-        <Link href={link.url}>
-          <a className="text-[13px] inline-block font-medium tracking-wider uppercase hover:text-pink-500 transition duration-200 relative before:absolute before:left-0 before:-bottom-1 before:w-11 before:h-0.5 before:bg-gradient-to-r before:from-blue-700 before:to-pink-600">{link.name}</a>
+        <Link href={`/post/${slug}`}>
+          <a className="text-[13px] inline-block font-medium tracking-wider uppercase hover:text-pink-500 transition duration-200 relative before:absolute before:left-0 before:-bottom-1 before:w-11 before:h-0.5 before:bg-gradient-to-r before:from-blue-700 before:to-pink-600">read more</a>
         </Link>
       </div>
     </section>

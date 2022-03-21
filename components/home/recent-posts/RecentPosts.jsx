@@ -18,8 +18,10 @@ const responsive = {
   }
 };
 
-export default function RecentPosts() {
-	const { home: { recentPosts: { title, posts, seeMoreLink } }, images: { calendarImage } } = data;
+export default function RecentPosts({ posts }) {
+	const { home: { recentPosts: { title, seeMoreLink } }, images: { calendarImage } } = data;
+
+	if(posts.length < 3) return <></>;
 
 	const arrowIcon = isRightArrow => (<span className={`absolute transition duration-200 flex items-center px-5 cursor-pointer h-full text-gray-200 z-20 text-4xl ${isRightArrow ? "right-1 sm:right-10" : "left-1 sm:left-10"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 

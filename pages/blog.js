@@ -1,9 +1,12 @@
+import { getAllPosts } from "services";
 import data from "data";
 import Image from "next/image";
 import { RecentPostCard } from "components";
 
-export default function Blog() {
-  const { posts, search } = data.blog;
+export default function Blog({posts}) {
+  const { search } = data.blog;
+
+  console.log(posts)
 
   return (
     <div className="container mx-auto mt-10 flex flex-col-reverse lg:flex-row lg:justify-between">
@@ -31,3 +34,12 @@ export default function Blog() {
   );
 }
 
+export async function getServerSideProps() {
+  const posts = (await getAllPosts()) || [];
+
+  return {
+    props: {
+      posts
+    }
+  }
+}

@@ -1,16 +1,26 @@
 import { useState, useRef, useEffect } from "react";
+import { submitComment } from "services";
 
-export default function CommentsForm() {
+const emailValidate = email => {
+	return String(email)
+  	.toLowerCase()
+ 		.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}
+
+export default function CommentsForm({ slug }) {
 	const [error, setError] = useState("");
 	const [saveData, setSaveData] = useState(false);
 	const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 	const [commentData, setCommentData] = useState({
-		name: "",
-		email: "",
+		userName: "",
+		userEmail: "",
 		comment: "",
+		slug
 	});
 
-	const {name, email, comment} = commentData;
+	const {userName, userEmail, comment} = commentData;
 
 	const handleCommentData = e => {
 		const nameOfData = e.target.name;
@@ -25,8 +35,11 @@ export default function CommentsForm() {
 	const handleComment = async () => {
 		setError("");
 
-		if (!name || !comment || !email) {
+		if (!userName || !comment || !emailValidate(userEmail)) {
 			setError("All field are required with valid data");
+		 	setTimeout(() => {
+				setError("");
+		 	}, 3000);
 			return;
 		}
 
@@ -35,6 +48,18 @@ export default function CommentsForm() {
 		} else {
 			window.localStorage.removeItem("userData");
 		}
+
+		submitComment(commentData)
+		 .then(res => {
+		 	setShowSuccessMessage(true);
+		 	setTimeout(() => {
+		 		setShowSuccessMessage(false);
+		 	}, 3000);
+		 })
+		 .catch(err => {
+		 		console.error("Submit Comment Error at Client side  ",err);
+		 		setError(err.message);
+		 });
 	}
 
 	useEffect(() => {
@@ -62,17 +87,17 @@ export default function CommentsForm() {
 						<input
 							type="text"
 							placeholder="Name"
-							value={name}
+							value={userName}
 							onChange={e => handleCommentData(e)}
-							name="name"
+							name="userName"
 							className="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
 						/>
 						<input
 							type="email"
 							placeholder="Email"
-							value={email}
+							value={userEmail}
 							onChange={e => handleCommentData(e)}
-							name="email"
+							name="userEmail"
 							className="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
 						/>
 					</div>

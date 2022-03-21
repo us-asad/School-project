@@ -1,5 +1,8 @@
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    domains: ["media.graphcms.com"]
+  }
 }
 
 module.exports = nextConfig
