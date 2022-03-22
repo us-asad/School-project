@@ -23,11 +23,11 @@ export default function About() {
 	const arrowIcon = isRightArrow => (<span className={`absolute md:hidden transition duration-200 flex items-center px-5 cursor-pointer h-full text-white z-20 text-4xl ${isRightArrow ? "right-0" : "left-0"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 	return (
-		<section className="container mx-auto my-8" id="about">
+		<section data-aos-once={true} data-aos="fade-up" className="container mx-auto my-8" id="about">
 			<div className="text-3xl flex justify-center font-bold text-center mb-7">
 				<h2 className="pb-3 px-3 border-b before:absolute before:-bottom-[4.5px] relative before:left-1/2 before:w-2 before:h-2 before:rounded-full before:bg-gray-400">{sectionTitle}</h2>
 			</div>
-			<div className="">
+			<div>
 				<Carousel
 						infinite
 						customRightArrow={arrowIcon(true)}
@@ -39,7 +39,7 @@ export default function About() {
 				</Carousel>
 			</div>
 			<AboutContent {...aboutContent} />
-			<div className="mt-8">
+			<div data-aos="fade-right" className="mt-8">
 				<Carousel
 						infinite
 						customRightArrow={arrowIcon(true)}
@@ -51,7 +51,7 @@ export default function About() {
 				</Carousel>
 			</div>
 			{staff.topStaff.map(({title, staffData},index) => (
-				<div key={index} className="mt-8">
+				<div data-aos={index === 0 ? "fade-left" : "fade-up"} key={index} className="mt-8">
 					<h3 className="text-center text-3xl font-semibold mb-5">{title}</h3>
 					<Carousel
 						infinite

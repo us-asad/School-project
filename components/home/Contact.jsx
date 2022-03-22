@@ -38,7 +38,7 @@ export default function Contact() {
 	}
 
 	return (
-		<section className="container mx-auto mb-10" id="contact">
+		<section data-aos="zoom-in-up" className="container mx-auto mb-10" id="contact">
 			<div className="text-3xl flex justify-center font-bold text-center mb-7">
 				<h2 className="pb-3 px-3 border-b before:absolute before:-bottom-[4.5px] relative before:left-1/2 before:w-2 before:h-2 before:rounded-full before:bg-gray-400">{title}</h2>
 			</div>
@@ -61,8 +61,11 @@ export default function Contact() {
 							className="py-2 px-4 mb-6 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
 						></textarea>
 						<button
-							className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-indigo-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
-						>{contactForm.buttonName}</button>
+							className="transition relative flex z-[2] justify-center items-center duration-500 ease hover:bg-indigo-900 inline-block bg-indigo-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
+						>
+							{contactForm.buttonName}
+							<span className="absolute hover:bg-indigo-900 w-[60%] h-[65%] rounded-full bg-indigo-600 duration-[10s] top-2.5 left-10 z-[1] animate-ping"></span>
+						</button>
 					</form>
 				</div>
 				<div className="mx-5 lg:mx-0">

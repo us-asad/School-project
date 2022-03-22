@@ -14,5 +14,7 @@ export { default as RecentPostCard } from "./home/recent-posts/RecentPostCard.js
 
 
 export { default as PostDetails } from "./post/PostDetails.jsx";
+export { default as RelatedPosts } from "./post/RelatedPosts.jsx";
 export { default as CommentsForm } from "./post/CommentsForm.jsx";
 export { default as Comments } from "./post/Comments.jsx";
+

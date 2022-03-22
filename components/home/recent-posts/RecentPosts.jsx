@@ -26,7 +26,7 @@ export default function RecentPosts({ posts }) {
 	const arrowIcon = isRightArrow => (<span className={`absolute transition duration-200 flex items-center px-5 cursor-pointer h-full text-gray-200 z-20 text-4xl ${isRightArrow ? "right-1 sm:right-10" : "left-1 sm:left-10"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 	return (
-		<div className="my-12">
+		<div data-aos="zoom-in-up" className="my-12">
 			<div className="text-3xl flex justify-center font-bold text-center mb-7">
 				<h2 className="pb-3 px-3 border-b before:absolute before:-bottom-[4.5px] relative before:left-1/2 before:w-2 before:h-2 before:rounded-full before:bg-gray-400">{title}</h2>
 			</div>

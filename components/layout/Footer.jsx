@@ -5,7 +5,7 @@ export default function Footer() {
 	const { layout: { navItems, footer }, images: { logoImage } } = data;
 
 	return (
-		<div className="bg-white text-black mt-10">
+		<footer className="bg-white text-black mt-10">
 			<div className="container mx-auto px-3 py-7 flex flex-col md:flex-row md:justify-around items-center">
 				<Link href="/">
 					<a className="text-2xl">{logoImage.alt}</a>
@@ -23,6 +23,6 @@ export default function Footer() {
 			<div className="border-t border-gray-300 text-center py-5 text-sm">
 				<p>{footer.bottomText}</p>
 			</div>
-		</div>
+		</footer>
 	);
 }

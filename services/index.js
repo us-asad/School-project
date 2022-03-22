@@ -1,7 +1,7 @@
 import { request, gql } from "graphql-request";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHQL_API;
-console.log(graphqlAPI)
+
 export const getLatestThreePosts = async () => {
 	const query = gql`
 		query MyQuery {

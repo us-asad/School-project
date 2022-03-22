@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import data from "data";
@@ -6,6 +7,7 @@ import data from "data";
 export default function Header() {
 	const [showNavbar, setShowNavbar] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
+	const router = useRouter();
 
 	const { layout: { navItems }, images: { logoImage } } = data;
 
