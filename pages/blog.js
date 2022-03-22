@@ -20,7 +20,7 @@ export default function Blog({ posts: postsData }) {
       <div className="w-[90%] mx-auto lg:w-[60%] space-y-12">
         {posts.length ?
           posts.map((post,index) => <RecentPostCard key={index} isBlogPage={true} {...post} />) :
-          <h3 className="text-3xl h-full flex justify-center items-center">No Posts for "{searchName}"</h3>
+          <h3 className="text-3xl h-full flex justify-center items-center">No Posts for &quot;{searchName}&quot;</h3>
         }
       </div>
       <div className="w-[90%] mx-auto lg:w-[35%]">
