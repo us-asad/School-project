@@ -2,7 +2,7 @@ const data = {
   images: {
     logoImage: {
       url: "",
-      alt: "Logo"
+      alt: "Hello School.."
     },
     calendarImage: {
       url: "/calendar.svg",
@@ -29,12 +29,12 @@ const data = {
       }
     ],
     footer: {
-      bottomText: `© ${new Date().getFullYear()} School 8 | All Right Reserved`
+      bottomText: `© ${new Date().getFullYear()} Hello School.. | All Rights Reserved`
     }
   },
   home: {
     homeMain: {
-      title: "Our Goal is to be The Best!",
+      title: "Welcome to Hello School..",
       subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       link: {
         url: "/blog",
@@ -78,7 +78,7 @@ const data = {
           url: "/carousel/1.jpg",
           alt: "School Pic"
         },
-        title: "8 School",
+        title: "Hello School..",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
       staff: {
@@ -267,8 +267,8 @@ const data = {
             alt: "loc icon"
           },
           link: {
-            url: "https://www.google.com/maps/place/8-maktab/@37.2369906,67.2569895,17z/data=!4m14!1m8!3m7!1s0x0:0xc42e513a15d8332c!2s8-maktab!8m2!3d37.2369906!4d67.2591782!9m1!1b1!3m4!1s0x3f353175ea9305a7:0xc42e513a15d8332c!8m2!3d37.2369906!4d67.2591782",
-            name: "See on goole map"
+            url: "https://www.google.com/maps/place/London,+UK/@51.5287718,-0.2416815,11z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5072178!4d-0.1275862",
+            name: "See on google map"
           }
         },
         {
@@ -278,8 +278,8 @@ const data = {
             alt: "mail icon"
           },
           link: {
-            url: "mailto:kundalikcom01@gmail.com",
-            name: "kundalikcom01@gmail.com"
+            url: "mailto:helloSchool@education.com",
+            name: "helloSchool@education.com"
           }
         }
       ]
@@ -306,7 +306,7 @@ const data = {
       title: "Comments",
       commentsForm: {
         title: "Leave a Reply",
-        checkoutText: "Save my name, email in this browser for the next time I comment.",
+        checkoutText: "Save my name, email for the next time.",
         alerts: {
           success: "Comment submitted for review",
           fail: "All field are required with valid data"
