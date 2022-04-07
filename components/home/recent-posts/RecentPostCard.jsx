@@ -8,14 +8,13 @@ export default function RecentPostCard(props) {
   const { calendarImage } = data.images;
 
   return (
-    <section className={`h-[616px] bg-[#f8faff] text-black mx-5 sm:mx-0 ${isBlogPage ? "rounded-lg" : "rounded w-[350px]"}`} id="recent-posts">
+    <div className={`h-[616px] bg-[#f8faff] text-black mx-5 sm:mx-0 ${isBlogPage ? "rounded-lg" : "rounded w-[350px]"}`}>
       <div className="h-[316px] relative">
-        <Image
+        <img
           src={image.url}
           alt="post img"
           objectFit="cover"
-          layout="fill"
-          className={`transition duration-500 rounded-b-none ${isBlogPage ? "rounded-lg" : "rounded"}`}
+          className={`w-full h-full transition duration-500 rounded-b-none ${isBlogPage ? "rounded-lg" : "rounded"}`}
         />
       </div>
       <div className="flex flex-col justify-between pt-2 sm:pt-8 px-7 pb-9 h-[300px]">
@@ -38,6 +37,6 @@ export default function RecentPostCard(props) {
           <a className="text-[13px] inline-block font-medium tracking-wider uppercase hover:text-pink-500 transition duration-200 relative before:absolute before:left-0 before:-bottom-1 before:w-11 before:h-0.5 before:bg-gradient-to-r before:from-blue-700 before:to-pink-600">read more</a>
         </Link>
       </div>
-    </section>
+    </div>
   );
 }
