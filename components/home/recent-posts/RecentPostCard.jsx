@@ -13,8 +13,7 @@ export default function RecentPostCard(props) {
         <img
           src={image.url}
           alt="post img"
-          objectFit="cover"
-          className={`w-full h-full transition duration-500 rounded-b-none ${isBlogPage ? "rounded-lg" : "rounded"}`}
+          className={`w-full h-full object-cover transition duration-500 rounded-b-none ${isBlogPage ? "rounded-lg" : "rounded"}`}
         />
       </div>
       <div className="flex flex-col justify-between pt-2 sm:pt-8 px-7 pb-9 h-[300px]">
